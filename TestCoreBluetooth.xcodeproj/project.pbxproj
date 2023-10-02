@@ -17,6 +17,11 @@
 		31348E712ACA5F2800FE59F2 /* TestCoreBluetoothTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31348E702ACA5F2800FE59F2 /* TestCoreBluetoothTests.swift */; };
 		31348E7B2ACA5F2800FE59F2 /* TestCoreBluetoothUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31348E7A2ACA5F2800FE59F2 /* TestCoreBluetoothUITests.swift */; };
 		31348E7D2ACA5F2800FE59F2 /* TestCoreBluetoothUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31348E7C2ACA5F2800FE59F2 /* TestCoreBluetoothUITestsLaunchTests.swift */; };
+		31348E8B2ACA673900FE59F2 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31348E8A2ACA673900FE59F2 /* BluetoothManager.swift */; };
+		31348E8D2ACA674B00FE59F2 /* BluetoothDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31348E8C2ACA674B00FE59F2 /* BluetoothDevice.swift */; };
+		31348E8F2ACA675600FE59F2 /* BluetoothUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31348E8E2ACA675600FE59F2 /* BluetoothUUIDs.swift */; };
+		31348E912ACA676400FE59F2 /* BluetoothUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31348E902ACA676400FE59F2 /* BluetoothUtilities.swift */; };
+		31348E942ACA6CC700FE59F2 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31348E932ACA6CC700FE59F2 /* DeviceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		31348E762ACA5F2800FE59F2 /* TestCoreBluetoothUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCoreBluetoothUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31348E7A2ACA5F2800FE59F2 /* TestCoreBluetoothUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreBluetoothUITests.swift; sourceTree = "<group>"; };
 		31348E7C2ACA5F2800FE59F2 /* TestCoreBluetoothUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreBluetoothUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		31348E8A2ACA673900FE59F2 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		31348E8C2ACA674B00FE59F2 /* BluetoothDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothDevice.swift; sourceTree = "<group>"; };
+		31348E8E2ACA675600FE59F2 /* BluetoothUUIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothUUIDs.swift; sourceTree = "<group>"; };
+		31348E902ACA676400FE59F2 /* BluetoothUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothUtilities.swift; sourceTree = "<group>"; };
+		31348E932ACA6CC700FE59F2 /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +111,15 @@
 		31348E552ACA5F2700FE59F2 /* TestCoreBluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				31348E922ACA67E100FE59F2 /* UI */,
+				31348E892ACA672200FE59F2 /* Bluetooth */,
 				31348E562ACA5F2700FE59F2 /* AppDelegate.swift */,
 				31348E582ACA5F2700FE59F2 /* SceneDelegate.swift */,
 				31348E5A2ACA5F2700FE59F2 /* ViewController.swift */,
-				31348E5C2ACA5F2700FE59F2 /* Main.storyboard */,
 				31348E622ACA5F2700FE59F2 /* Assets.xcassets */,
-				31348E642ACA5F2700FE59F2 /* LaunchScreen.storyboard */,
 				31348E672ACA5F2700FE59F2 /* Info.plist */,
 				31348E5F2ACA5F2700FE59F2 /* TestCoreBluetooth.xcdatamodeld */,
+				31348E932ACA6CC700FE59F2 /* DeviceViewController.swift */,
 			);
 			path = TestCoreBluetooth;
 			sourceTree = "<group>";
@@ -128,6 +139,26 @@
 				31348E7C2ACA5F2800FE59F2 /* TestCoreBluetoothUITestsLaunchTests.swift */,
 			);
 			path = TestCoreBluetoothUITests;
+			sourceTree = "<group>";
+		};
+		31348E892ACA672200FE59F2 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				31348E8A2ACA673900FE59F2 /* BluetoothManager.swift */,
+				31348E8C2ACA674B00FE59F2 /* BluetoothDevice.swift */,
+				31348E8E2ACA675600FE59F2 /* BluetoothUUIDs.swift */,
+				31348E902ACA676400FE59F2 /* BluetoothUtilities.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		31348E922ACA67E100FE59F2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				31348E5C2ACA5F2700FE59F2 /* Main.storyboard */,
+				31348E642ACA5F2700FE59F2 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +292,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31348E8D2ACA674B00FE59F2 /* BluetoothDevice.swift in Sources */,
 				31348E5B2ACA5F2700FE59F2 /* ViewController.swift in Sources */,
+				31348E8F2ACA675600FE59F2 /* BluetoothUUIDs.swift in Sources */,
 				31348E612ACA5F2700FE59F2 /* TestCoreBluetooth.xcdatamodeld in Sources */,
 				31348E572ACA5F2700FE59F2 /* AppDelegate.swift in Sources */,
+				31348E912ACA676400FE59F2 /* BluetoothUtilities.swift in Sources */,
 				31348E592ACA5F2700FE59F2 /* SceneDelegate.swift in Sources */,
+				31348E8B2ACA673900FE59F2 /* BluetoothManager.swift in Sources */,
+				31348E942ACA6CC700FE59F2 /* DeviceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
